@@ -1,4 +1,4 @@
-header {
+#body-header {
   height: 400px;
   width: 100%;
   position: relative;
@@ -9,7 +9,7 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
-header h2 {
+#body-header h2 {
   color: #ffffff;
   margin: 0;
 }

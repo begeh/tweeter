@@ -15,22 +15,33 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/article-tweet.css" type="text/css" />
 
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/compose-char-counter.js"></script>
+
 </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-    <span class="logo">tweeter</span>
-    <span class="mini-logo"><strong>Write</strong> a new tweet</span>
+    <span id="logo">tweeter</span>
+    <span>
+      <span id="mini-logo">
+        <strong>Write</strong> a new tweet
+      </span>
+      <span id='chevron'>
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACEklEQVRoge3ZQUojQRTG8f8Tmf3gQumrJJ4gvREMYSAwbsX76AWiEgUZmHgCyVVMriA4PhdJa4+pbquqX9kq/W2SdFKd96M7xQeBLl26dOnSQqT8YjHoDxE5A31QkZPs792ftgZz5T7vHwicAT8EPd6bzafFe1vFEwVBOAXdATJRvV7mvVEbA7uyzHsjgStgF/ipyKmWLsQLRECBp9LabUUmnwGzzHsjRSbAdunw43pmoAQBUNVj4LF0qHVMFWI960v+g2S38xuQX2xizu8H++N047qzGPSHDsQ/RY9Ws75GcGSR7x+CXm6cQOUou72b2I/smGHQHyJcbMyA/s5m8/O3n3dCoF1MKAJqINAOJgYB70DgYzGxCPCAwMdgmiDAEwJpMU0REACBNBgLBARCwBZjhYDI0lhdGXRcLnJ1iTmHeWncm82ngo6JrDMxiGSlMRYTi0haGkMxlgjz0rga4P01dQWwCtFKaaxbI+hD6O5kVhotb4P1o8FvonrNlusg+N8yPmswup3qtvYkpbFiTTGQ2e0UBKkZLBSTDOENqRhs9UV+GEmJgMCuFbsBQPH7sTmnK9+zNHoPYICxREAkBJphrBHQAAKRG0ACBDSEQBgmFQIMIOCHSYkAIwjYl8bQmEHArjTGxBQCtT2riOmVKGIOgfjS2CRJIBBeGpsmGQT8S+OXyDLvjT7D33ddunT5JnkGI3W54gqRnO8AAAAASUVORK5CYII=">
+      </span>
+    </span>
 
   </nav>
-  <header>
+  <header id='body-header'>
     <div>
       <div>
         <img src="/images/profile-hex.png">
@@ -44,12 +55,34 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <form method="POST" action='/tweets'>
+      <h2><strong>Compose Tweet</strong></h2>
+      <form method="POST" action='/tweets' id="text-form">
         <textarea name="text" id='text-area' placeholder="What are you humming about?"></textarea>
         <input type="submit" class='button' value="Tweet">
         <span id="counter">140</span>
       </form>
+    </section>
+    <section class='tweet-container'>
+      <article class='tweets'>
+        <header>
+          <img class='tweeter-icon' src="https://image.flaticon.com/icons/svg/105/105621.svg" />
+          <p class='name'>Bashir</p>
+          <p class='handle'>@BEgeh</p>
+        </header>
+        <div>
+          <p class='the-tweet'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+        </div>
+        <footer>
+          <p>10 days</p>
+          <div class='icons-container'>
+            <img class='icons' src="https://img.icons8.com/material-sharp/24/000000/flag.png">
+            <img class='icons' src="https://img.icons8.com/material-sharp/24/000000/retweet.png">
+            <img class='icons' src="https://img.icons8.com/material-sharp/24/000000/like.png">
+          </div>
+        </footer>
+      </article>
     </section>
   </main>
 </body>

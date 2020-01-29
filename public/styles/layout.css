@@ -4,7 +4,7 @@
  * Do not modify these two selectors, please
  */
 
-h2{
+h2 {
   font-weight: normal;
   position: relative;
 }
@@ -30,8 +30,7 @@ body {
 
 main {
   width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: auto;
   background-color: #f4f1ec;
   z-index: 10;
 }
