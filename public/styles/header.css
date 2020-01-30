@@ -1,4 +1,4 @@
-#body-header {
+ .body-header {
   height: 400px;
   width: 100%;
   position: relative;
@@ -9,7 +9,33 @@
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
-#body-header h2 {
+.body-header h2 {
   color: #ffffff;
   margin: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  #flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-direction:row;
+  }
+
+  main{
+    margin:0;
+  }
+  .body-header {
+    max-width: 30%;
+    position:fixed;
+    margin-top:8em;
+    padding-top:1em;
+  }
+
+  .container {
+    width: 66.7%;
+    padding-top: 120px;
+    margin-left:auto;
+  }
+
 }

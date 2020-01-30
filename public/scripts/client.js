@@ -106,10 +106,10 @@ $(document).ready(function () {
         $('#error').text('');
         $.ajax('/tweets', { method: 'POST', data: $submit.serialize() })
           .then(() => { loadTweets() });
+        $('#text-area').val('');
+        $('#counter').text('140');
+        $('#counter').css('color', 'black');
       }
-      $('#text-area').val('');
-      $('#counter').text('140');
-      $('#counter').css('color', 'black');
     });
   });
 

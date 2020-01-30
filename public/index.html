@@ -4,6 +4,7 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
   <!-- External CSS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -42,16 +43,17 @@
       </span>
     </span>
   </nav>
-  <header id='body-header'>
+  <div id='flex-container'>
+  <header class='body-header'>
     <div>
       <div>
-        <img src="/images/profile-hex.png">
+        <img id='user-img' src="/images/profile-hex.png">
       </div>
       <br>
       <div>
         <h2><strong>Bashir</strong> Egeh</h2>
       </div>
-    </div>
+    </divclass='body-header'>
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
@@ -67,6 +69,7 @@
     <section class='tweet-container'>
     </section>
   </main>
+</div>
 </body>
 
 </html>

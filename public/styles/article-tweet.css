@@ -1,3 +1,8 @@
+/* .tweet-container{
+  display:flex;
+  flex-direction: column;
+} */
+
 .tweets {
   width: 100%;
   padding: 1.5em;
