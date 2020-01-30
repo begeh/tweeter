@@ -93,10 +93,15 @@ $(document).ready(function () {
     const $submit = $('#text-form');
     $submit.on('submit', function (event) {
       event.preventDefault();
+      // console.log($submit.find($('#text-area')).val());
       if ($submit.find($('#text-area')).val() === `` || $submit.find($('#text-area')).val() === null) {
         $('#error').text('Field is empty. Please enter tweet before submitting.');
+        $('#error').hide();
+        $('#error').slideDown('slow');
       } else if ($submit.find($('#text-area')).val().length > 140) {
         $('#error').text("You are over 140 character limit.");
+        $('#error').hide();
+        $('#error').slideDown('slow');
       } else {
         $('#error').text('');
         $.ajax('/tweets', { method: 'POST', data: $submit.serialize() })
@@ -104,6 +109,7 @@ $(document).ready(function () {
       }
       $('#text-area').val('');
       $('#counter').text('140');
+      $('#counter').css('color', 'black');
     });
   });
 
