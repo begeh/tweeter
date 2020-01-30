@@ -43,10 +43,16 @@ const convertDate = (date) => {
   }
 }
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 const renderTweets = function (tweets) {
   for (user of tweets) {
     const $tweet = createTweetElement(user);
-    $('.tweet-container').append($tweet);
+    $('.tweet-container').prepend($tweet);
   }
 }
 
@@ -59,7 +65,7 @@ const createTweetElement = function (tweet) {
   <p class='handle'>${tweet.user.handle}</p>
 </header>
 <div>
-  <p class='the-tweet'>${tweet.content.text}</p>
+  <p class='the-tweet'>${escape(tweet.content.text)}</p>
 </div>
 <footer>
   <p>${moment(tweet.created_at).fromNow()}</p>
@@ -75,24 +81,33 @@ const createTweetElement = function (tweet) {
 
 $(document).ready(function () {
 
+  const loadTweets = function () {
+    $.ajax('/tweets', { method: 'GET', datatype: 'json' })
+    .then((res) => {
+      $('.tweet-container').empty();
+      renderTweets(res);
+    });
+  };
+
   $(function () {
     const $submit = $('#text-form');
     $submit.on('submit', function (event) {
       event.preventDefault();
-      console.log('Button clicked, performing ajax call...');
-      console.log($submit.serialize().length);
       if ($submit.serialize() === `text=` || $submit.serialize() === null) {
         alert('Field is empty. Please enter tweet before submitting.');
       } else if ($submit.serialize().length > 145) {
         alert("You are over 140 character limit. Please reduce length of tweet and resubmit");
       } else {
         $.ajax('/tweets', { method: 'POST', data: $submit.serialize() })
+          .then(() => { loadTweets() });
       }
     });
   });
 
-  const loadTweets = $.ajax('/tweets', { method: 'GET', datatype: 'json', success: function (res) { renderTweets(res); } });
-
-  console.log(loadTweets);
-
+  $( "#chevron" ).click(function(element) {
+    element.preventDefault();
+    $('.new-tweet').toggle('slow');
+  });
+  
+  loadTweets();
 });
