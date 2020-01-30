@@ -25,3 +25,32 @@
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
+
+#error {
+  display: inline-block;
+  color: red;
+  font-weight: bolder;
+  margin: 0 0 0 1em;
+}
+
+/* div.slide-right {
+  display: inline-block;
+  margin: auto;
+  width: 50%;
+  overflow: hidden;
+}
+
+div.slide-right p {
+  animation: 3s slide-right;
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 1em;
+    width: 100%;
+  }
+} */

@@ -19,7 +19,7 @@
 
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
 
 
   <!-- App JS -->
@@ -37,11 +37,10 @@
         <strong>Write</strong> a new tweet
       </span>
       <span>
-      <input id='chevron' type = "image" alt="submit"
+        <input id='chevron' type="image" alt="submit"
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACEklEQVRoge3ZQUojQRTG8f8Tmf3gQumrJJ4gvREMYSAwbsX76AWiEgUZmHgCyVVMriA4PhdJa4+pbquqX9kq/W2SdFKd96M7xQeBLl26dOnSQqT8YjHoDxE5A31QkZPs792ftgZz5T7vHwicAT8EPd6bzafFe1vFEwVBOAXdATJRvV7mvVEbA7uyzHsjgStgF/ipyKmWLsQLRECBp9LabUUmnwGzzHsjRSbAdunw43pmoAQBUNVj4LF0qHVMFWI960v+g2S38xuQX2xizu8H++N047qzGPSHDsQ/RY9Ws75GcGSR7x+CXm6cQOUou72b2I/smGHQHyJcbMyA/s5m8/O3n3dCoF1MKAJqINAOJgYB70DgYzGxCPCAwMdgmiDAEwJpMU0REACBNBgLBARCwBZjhYDI0lhdGXRcLnJ1iTmHeWncm82ngo6JrDMxiGSlMRYTi0haGkMxlgjz0rga4P01dQWwCtFKaaxbI+hD6O5kVhotb4P1o8FvonrNlusg+N8yPmswup3qtvYkpbFiTTGQ2e0UBKkZLBSTDOENqRhs9UV+GEmJgMCuFbsBQPH7sTmnK9+zNHoPYICxREAkBJphrBHQAAKRG0ACBDSEQBgmFQIMIOCHSYkAIwjYl8bQmEHArjTGxBQCtT2riOmVKGIOgfjS2CRJIBBeGpsmGQT8S+OXyDLvjT7D33ddunT5JnkGI3W54gqRnO8AAAAASUVORK5CYII=">
       </span>
     </span>
-
   </nav>
   <header id='body-header'>
     <div>
@@ -61,12 +60,15 @@
       <form method="POST" action='/tweets' id="text-form">
         <textarea name="text" id='text-area' placeholder="What are you humming about?"></textarea>
         <input type="submit" class='button' value="Tweet">
+        <!-- <div class='slide-right'> -->
+        <p id='error'></p>
+        <!-- </div> -->
         <span id="counter">140</span>
       </form>
     </section>
     <section class='tweet-container'>
     </section>
   </main>
-</body> 
+</body>
 
 </html>

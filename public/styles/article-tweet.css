@@ -63,3 +63,7 @@ article.tweets footer p {
   align-self: flex-end;
   margin-left: auto;
 }
+
+.the-tweet{
+  overflow-wrap: break-word;
+}

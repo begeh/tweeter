@@ -32,7 +32,7 @@ const convertDate = (date) => {
     } else {
       return Math.floor(timeSince / 3600000) + ' hours';
     }
-  } else if (Math.floor(timeSince / 1000) === 1) {
+  } else if (Math.floor(timeSince / 1000) > 0) {
     if (Math.floor(timeSince / 1000) === 1) {
       return Math.floor(timeSince / 1000) + ' a second';
     } else {
@@ -43,7 +43,7 @@ const convertDate = (date) => {
   }
 }
 
-const escape =  function(str) {
+const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -83,31 +83,41 @@ $(document).ready(function () {
 
   const loadTweets = function () {
     $.ajax('/tweets', { method: 'GET', datatype: 'json' })
-    .then((res) => {
-      $('.tweet-container').empty();
-      renderTweets(res);
-    });
+      .then((res) => {
+        $('.tweet-container').empty();
+        renderTweets(res);
+      });
   };
 
   $(function () {
     const $submit = $('#text-form');
     $submit.on('submit', function (event) {
       event.preventDefault();
-      if ($submit.serialize() === `text=` || $submit.serialize() === null) {
-        alert('Field is empty. Please enter tweet before submitting.');
-      } else if ($submit.serialize().length > 145) {
-        alert("You are over 140 character limit. Please reduce length of tweet and resubmit");
+      if ($submit.find($('#text-area')).val() === `` || $submit.find($('#text-area')).val() === null) {
+        $('#error').text('Field is empty. Please enter tweet before submitting.');
+      } else if ($submit.find($('#text-area')).val().length > 140) {
+        $('#error').text("You are over 140 character limit.");
       } else {
+        $('#error').text('');
         $.ajax('/tweets', { method: 'POST', data: $submit.serialize() })
           .then(() => { loadTweets() });
       }
+      $('#text-area').val('');
+      $('#counter').text('140');
     });
   });
 
-  $( "#chevron" ).click(function(element) {
+  $("#chevron").click(function (element) {
     element.preventDefault();
     $('.new-tweet').toggle('slow');
+    $('#text-area').val('');
+    $('#counter').text('140');
   });
-  
+
+  $('#chevron').hover(function (element) {
+    element.preventDefault();
+    $('#chevron').css('cursor', 'pointer');
+  })
+
   loadTweets();
 });
