@@ -4,8 +4,15 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
-!['Screesh]
+!["Screenshot of Opening Desktop Page of Tweeter](https://github.com/begeh/tweeter/blob/master/docs/open-page-desktop.png)
 
+!["Screenshot of Desktop Page of Tweeter with Compose Box](https://github.com/begeh/tweeter/blob/master/docs/compose-tweet-toggle.png)
+
+!["Screenshot of Desktop Page of Tweeter with Tweet Hover Effect](https://github.com/begeh/tweeter/blob/master/docs/hover-over-effect.png)
+
+!["Screenshot of Mobile Page of Tweeter](https://github.com/begeh/tweeter/blob/master/docs/mobile-page.png)
+
+!["Screenshot of Mobile Page of Tweeter Scrolled Down](https://github.com/begeh/tweeter/blob/master/docs/mobile-page-scrolldown.png)
 
 ## Getting Started
 
