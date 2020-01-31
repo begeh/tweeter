@@ -74,6 +74,7 @@ $(document).ready(function() {
         $('#text-area').val('');
         $('#counter').text('140');
         $('#counter').css('color', 'black');
+        $("#text-area").focus();
       }
     });
   });
