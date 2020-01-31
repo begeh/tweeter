@@ -1,27 +1,26 @@
  .body-header {
-  height: 400px;
-  width: 100%;
-  position: relative;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  text-align: center;
-  background-color: #fd7e14;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-}
+   height: 400px;
+   width: 100%;
+   position: relative;
+   margin-top: 0px;
+   margin-bottom: 10px;
+   text-align: center;
+   background-color: #fd7e14;
+   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+ }
 
-.body-header h2 {
-  color: #ffffff;
-  margin: 0;
-}
+ .body-header h2 {
+   color: #ffffff;
+   margin: 0;
+ }
 
-@media only screen and (min-width: 1024px) {
-
-  .body-header {
-    width: 35%;
-    position:fixed;
-    margin-top:12em;
-    padding-top:1em;
-    margin-left: 1em;
-  }
-
-}
+ /* css formatting for laptop screen */
+ @media only screen and (min-width: 1024px) {
+   .body-header {
+     width: 35%;
+     position: fixed;
+     margin-top: 12em;
+     padding-top: 1em;
+     margin-left: 1em;
+   }
+ }

@@ -9,7 +9,7 @@ nav {
   color: #ffffff;
   padding: 1.5em;
   display: flex;
-  background-color:#fd7e14;
+  background-color: #fd7e14;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
@@ -17,17 +17,17 @@ nav {
   font-family: "Bungee";
   width: 100%;
   font-size: 48px;
-  position:fixed;
+  position: fixed;
 }
 
 #mini-logo {
-  display:flex;
-  margin-left:auto;
+  display: flex;
+  margin-left: auto;
   font-family: "Source Sans Pro";
 }
 
-#mini-logo-container{
-  margin-left:auto;
+#mini-logo-container {
+  margin-left: auto;
 }
 
 #chevron {
@@ -55,18 +55,17 @@ nav {
   }
 }
 
+/* css formatting for laptop screen */
 @media only screen and (min-width: 1024px) {
-  nav{
+  nav {
     background-color: #4056A1;
     background-image: none;
-    position:fixed;
+    position: fixed;
   }
-
   #mini-logo {
-    width:8em;
+    width: 8em;
   }
-
-  #logo{
-    position:relative;
+  #logo {
+    position: relative;
   }
 }

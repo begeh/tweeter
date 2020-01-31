@@ -1,8 +1,3 @@
-/* .tweet-container{
-  display:flex;
-  flex-direction: column;
-} */
-
 .tweets {
   width: 100%;
   padding: 1.5em;
@@ -18,6 +13,7 @@ article.tweets header {
   justify-content: space-between;
 }
 
+/* css for */
 article.tweets header p {
   margin: 0.4em 0 0 0.5em;
 }
@@ -31,15 +27,15 @@ article.tweets header p.handle {
   font-weight: bold;
 }
 
-article:hover{
+article:hover {
   box-shadow: 5px 10px #ADD8E6;
 }
 
-article:hover.tweets header p.handle{
+article:hover.tweets header p.handle {
   color: #ADD8E6;
-} 
+}
 
-article:hover.tweets footer .icons-container{
+article:hover.tweets footer .icons-container {
   opacity: 1;
 }
 
@@ -71,9 +67,9 @@ article.tweets footer p {
 .icons-container {
   align-self: flex-end;
   margin-left: auto;
-  opacity:0;
+  opacity: 0;
 }
 
-.the-tweet{
+.the-tweet {
   overflow-wrap: break-word;
 }

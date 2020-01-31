@@ -4,45 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const convertDate = (date) => {
-  let timeSince = (new Date()).getTime() - date;
-  console.log(timeSince);
-
-  if (Math.floor(timeSince / 31556952000) > 0) {
-    if (Math.floor(timeSince / 31556952000) === 1) {
-      return Math.floor(timeSince / 31556952000) + ' year';
-    } else {
-      return Math.floor(timeSince / 31556952000) + ' years';
-    }
-  } else if (Math.floor(timeSince / 2592000000) > 0) {
-    if (Math.floor(timeSince / 2592000000) === 1) {
-      return Math.floor(timeSince / 2592000000) + ' a month';
-    } else {
-      return Math.floor(timeSince / 2592000000) + ' months';
-    }
-  } else if (Math.floor(timeSince / 86400000) > 0) {
-    if (Math.floor(timeSince / 86400000) === 1) {
-      return Math.floor(timeSince / 86400000) + ' day';
-    } else {
-      return Math.floor(timeSince / 86400000) + ' days';
-    }
-  } else if (Math.floor(timeSince / 3600000) > 0) {
-    if (Math.floor(timeSince / 3600000) === 1) {
-      return Math.floor(timeSince / 3600000) + ' an hour';
-    } else {
-      return Math.floor(timeSince / 3600000) + ' hours';
-    }
-  } else if (Math.floor(timeSince / 1000) > 0) {
-    if (Math.floor(timeSince / 1000) === 1) {
-      return Math.floor(timeSince / 1000) + ' a second';
-    } else {
-      return Math.floor(timeSince / 1000) + ' seconds';
-    }
-  } else {
-    return `0 seconds`;
-  }
-}
-
 const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
@@ -93,7 +54,6 @@ $(document).ready(function () {
     const $submit = $('#text-form');
     $submit.on('submit', function (event) {
       event.preventDefault();
-      // console.log($submit.find($('#text-area')).val());
       if ($submit.find($('#text-area')).val() === `` || $submit.find($('#text-area')).val() === null) {
         $('#error').text('Field is empty. Please enter tweet before submitting.');
         $('#error').hide();
