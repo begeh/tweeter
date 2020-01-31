@@ -1,3 +1,5 @@
+ /* css formatting for the 'write a new tweet' text in upper screen */
+
  .body-header {
    height: 400px;
    width: 100%;
@@ -9,12 +11,15 @@
    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
  }
 
+ /* css formatting for the user name in the header */
+
  .body-header h2 {
    color: #ffffff;
    margin: 0;
  }
 
  /* css formatting for laptop screen */
+
  @media only screen and (min-width: 1024px) {
    .body-header {
      width: 35%;

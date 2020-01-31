@@ -13,6 +13,8 @@ nav {
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
+/* css formatting for the the "tweeter" logo */
+
 #logo {
   font-family: "Bungee";
   width: 100%;
@@ -20,15 +22,21 @@ nav {
   position: fixed;
 }
 
+/* css formatting for the 'write a new tweet' text in upper screen */
+
 #mini-logo {
   display: flex;
   margin-left: auto;
   font-family: "Source Sans Pro";
 }
 
+/* css formatting for the 'write a new tweet' text nav and the moving chevron*/
+
 #mini-logo-container {
   margin-left: auto;
 }
+
+/* css formatting for moving chevron button in nav */
 
 #chevron {
   margin-left: 2.5em;
@@ -36,6 +44,8 @@ nav {
   animation: mover 1s infinite alternate;
   outline: 0;
 }
+
+/* webkit adding in animation movements for bouncing chevron */
 
 @-webkit-keyframes mover {
   0% {
@@ -56,6 +66,7 @@ nav {
 }
 
 /* css formatting for laptop screen */
+
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: #4056A1;

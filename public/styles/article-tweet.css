@@ -1,3 +1,5 @@
+/* css formatting the article containing each tweet */
+
 .tweets {
   width: 100%;
   padding: 1.5em;
@@ -7,42 +9,57 @@
   margin-top: 2em;
 }
 
+/* css formatting the header of each tweet, icluding the avatar, name, and handle */
+
 article.tweets header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-/* css for */
+/* css formatting for the p tags for the name and handle margins */
+
 article.tweets header p {
   margin: 0.4em 0 0 0.5em;
 }
 
+/* css formatting for positioning the tweeter name to the right */
+
 article.tweets header p.name {
   margin-right: auto;
 }
+
+/* css formatting for styling the tweeter's handle */
 
 article.tweets header p.handle {
   color: #f4f1ec;
   font-weight: bold;
 }
 
+/* css creating drop shadow when hovering over tweet */
+
 article:hover {
   box-shadow: 5px 10px #ADD8E6;
 }
 
+/* css reveals tweeter's handle when hovering over tweet */
+
 article:hover.tweets header p.handle {
-  color: #ADD8E6;
+  color: black;
 }
 
 article:hover.tweets footer .icons-container {
   opacity: 1;
 }
 
+/* css formatting for the the p tag that contains the tweet when rendered */
+
 .tweeter-icon {
   height: 50px;
   width: 50px;
 }
+
+/* css formatting the footer of the tweet */
 
 article.tweets footer {
   display: flex;
@@ -50,6 +67,8 @@ article.tweets footer {
   justify-content: space-between;
   border-top: solid;
 }
+
+/* css formatting the text of the timespan since posting in the footer of the tweet */
 
 article.tweets footer p {
   align-self: flex-end;
@@ -59,16 +78,22 @@ article.tweets footer p {
   font-weight: bold;
 }
 
+/* css formatting size of social icons */
+
 .icons {
   height: 24px;
   width: 24px;
 }
+
+/* css formatting for the the div containing the social icons (flag, like, share) */
 
 .icons-container {
   align-self: flex-end;
   margin-left: auto;
   opacity: 0;
 }
+
+/* css formatting for the the p tag that contains the tweet when rendered */
 
 .the-tweet {
   overflow-wrap: break-word;
