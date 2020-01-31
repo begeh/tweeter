@@ -118,6 +118,10 @@ $(document).ready(function () {
     $('.new-tweet').toggle('slow');
     $('#text-area').val('');
     $('#counter').text('140');
+    $('#counter').css('color', 'black');
+    $('#error').text('');
+    $("#text-area").focus();
+    $("#text-area").css('outline', '0');
   });
 
   $('#chevron').hover(function (element) {
@@ -126,4 +130,5 @@ $(document).ready(function () {
   })
 
   loadTweets();
+  $('.new-tweet').hide();
 });

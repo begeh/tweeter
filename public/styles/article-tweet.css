@@ -39,6 +39,10 @@ article:hover.tweets header p.handle{
   color: #ADD8E6;
 } 
 
+article:hover.tweets footer .icons-container{
+  opacity: 1;
+}
+
 .tweeter-icon {
   height: 50px;
   width: 50px;
@@ -67,6 +71,7 @@ article.tweets footer p {
 .icons-container {
   align-self: flex-end;
   margin-left: auto;
+  opacity:0;
 }
 
 .the-tweet{

@@ -1,25 +1,33 @@
 nav {
-  position: fixed;
+  position: relative;
   top: 0;
   right: 0;
   left: 0;
   height: 120px;
   width: 100%;
   z-index: 1030;
-  background-color: #4056A1;
   color: #ffffff;
   padding: 1.5em;
   display: flex;
+  background-color:#fd7e14;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
 #logo {
   font-family: "Bungee";
   width: 100%;
   font-size: 48px;
+  position:fixed;
 }
 
 #mini-logo {
+  display:flex;
+  margin-left:auto;
   font-family: "Source Sans Pro";
+}
+
+#mini-logo-container{
+  margin-left:auto;
 }
 
 #chevron {
@@ -44,5 +52,21 @@ nav {
   }
   100% {
     transform: translateY(-5px);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav{
+    background-color: #4056A1;
+    background-image: none;
+    position:fixed;
+  }
+
+  #mini-logo {
+    width:8em;
+  }
+
+  #logo{
+    position:relative;
   }
 }

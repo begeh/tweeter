@@ -2,7 +2,7 @@
   height: 400px;
   width: 100%;
   position: relative;
-  margin-top: 120px;
+  margin-top: 0px;
   margin-bottom: 10px;
   text-align: center;
   background-color: #fd7e14;
@@ -15,27 +15,13 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  #flex-container {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-direction:row;
-  }
 
-  main{
-    margin:0;
-  }
   .body-header {
-    max-width: 30%;
+    width: 35%;
     position:fixed;
-    margin-top:8em;
+    margin-top:12em;
     padding-top:1em;
-  }
-
-  .container {
-    width: 66.7%;
-    padding-top: 120px;
-    margin-left:auto;
+    margin-left: 1em;
   }
 
 }

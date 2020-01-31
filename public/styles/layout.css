@@ -44,14 +44,14 @@ main {
   #flex-container {
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: row wrap;
     flex-direction:row;
   }
 
   .container {
-    width: 66.7%;
+    width: 60%;
     padding-top: 120px;
     margin-left:auto;
+    margin-right:1em;
   }
 
   main{
