@@ -5,21 +5,21 @@
  */
 
 //escape function validates text inputted in text-area to prevent malicious text from being processed
-const escape = function(str) {
+const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
 //funnction renders tweets by taking tweet database and running it through createTweet function and, finally, prepending the tweets to the text-container section
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   for (user of tweets) {
     const $tweet = createTweetElement(user);
     $('.tweet-container').prepend($tweet);
   }
 };
 
-const createTweetElement = function(tweet) {
+const createTweetElement = function (tweet) {
   return `
   <article class='tweets'>
   <header>
@@ -42,9 +42,9 @@ const createTweetElement = function(tweet) {
 };
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-  const loadTweets = function() {
+  const loadTweets = function () {
     $.ajax('/tweets', { method: 'GET', datatype: 'json' })
       .then((res) => {
         $('.tweet-container').empty();
@@ -53,7 +53,7 @@ $(document).ready(function() {
   };
 
   //function submits tweet when 'tweet' button is clicked through ajax POST and GET requests. throws errors if input is empty/null or if text is too long when button is clicked.
-  $(function() {
+  $(function () {
     const $submit = $('#text-form');
     $submit.on('submit', function(event) {
       event.preventDefault();
@@ -61,10 +61,12 @@ $(document).ready(function() {
         $('#error').text('Field is empty. Please enter tweet before submitting.');
         $('#error').hide();
         $('#error').slideDown('slow');
+        $("#text-area").focus();
       } else if ($submit.find($('#text-area')).val().length > 140) {
         $('#error').text("You are over 140 character limit.");
         $('#error').hide();
         $('#error').slideDown('slow');
+        $("#text-area").focus();
       } else {
         $('#error').text('');
         $.ajax('/tweets', { method: 'POST', data: $submit.serialize() })
@@ -79,7 +81,7 @@ $(document).ready(function() {
     });
   });
 
-  $("#chevron").click(function(element) {
+  $("#chevron").click(function (element) {
     element.preventDefault();
     $('.new-tweet').toggle('slow');
     $('#text-area').val('');
@@ -90,7 +92,7 @@ $(document).ready(function() {
     $("#text-area").css('outline', '0');
   });
 
-  $('#chevron').hover(function(element) {
+  $('#chevron').hover(function (element) {
     element.preventDefault();
     $('#chevron').css('cursor', 'pointer');
   });
