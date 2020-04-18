@@ -42,3 +42,9 @@ a:hover .top:after{
   border-top: 0.5em solid #e74c3c;
   border-right: 0.5em solid #e74c3c;
 }
+
+@media only screen and (min-width: 1024px) {
+  .scroll-button{
+    display: none;
+  }
+}
