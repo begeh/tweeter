@@ -1,0 +1,40 @@
+.scroll-button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.action-scroll{
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.top {
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  border: 0.5em solid #333;
+  border-radius: 100%;
+  margin-right: 0.75em;
+}
+
+.top:after {
+  content: '';
+	display: inline-block;
+  margin-top: 1.4em;
+  width: 1.4em;
+  height: 1.4em;
+  border-top: 0.5em solid #333;
+  border-right: 0.5em solid #333;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+a:hover .top{
+  border: 0.5em solid #e74c3c;
+}
+
+a:hover .top:after{
+  border-top: 0.5em solid #e74c3c;
+  border-right: 0.5em solid #e74c3c;
+}
