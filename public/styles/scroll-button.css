@@ -1,6 +1,9 @@
 .scroll-button {
-  display: inline-block;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
   vertical-align: middle;
+  opacity: 0;
 }
 
 .action-scroll{
@@ -20,7 +23,8 @@
 .top:after {
   content: '';
 	display: inline-block;
-  margin-top: 1.4em;
+  margin-top: 1em;
+  margin-left:0.75em;
   width: 1.4em;
   height: 1.4em;
   border-top: 0.5em solid #333;
@@ -37,4 +41,10 @@ a:hover .top{
 a:hover .top:after{
   border-top: 0.5em solid #e74c3c;
   border-right: 0.5em solid #e74c3c;
+}
+
+@media only screen and (min-width: 1024px) {
+  .scroll-button{
+    display: none;
+  }
 }

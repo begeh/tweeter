@@ -97,6 +97,22 @@ $(document).ready(function () {
     $('#chevron').css('cursor', 'pointer');
   });
 
+  $(window).scroll(function(){
+    const position = $(window).scrollTop();
+    if(position > 110){
+      $(".scroll-button").css("opacity", 1.0);
+    } else{
+      $(".scroll-button").css("opacity", 0.0);;
+    }
+  })
+
+  $(".scroll-button").click(function(){
+    if($('.new-tweet').is(':visible') === false){
+      $('.new-tweet').toggle('slow');
+    }
+      windows.scrollTop();
+  })
+
   loadTweets();
   $('.new-tweet').hide();
 });
