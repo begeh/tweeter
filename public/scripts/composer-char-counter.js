@@ -10,4 +10,8 @@ $(document).ready(() => {
       $(this).parent().find($('#counter')).css('color', 'black');
     }
   });
+
+  $(".scroll-button").click(function(){
+    windows.scrollto(0,0);
+  })
 });
