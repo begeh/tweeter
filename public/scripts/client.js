@@ -107,7 +107,11 @@ $(document).ready(function () {
   })
 
   $(".scroll-button").click(function(){
-    windows.scrollTop();
+    if($('.new-tweet').is(':visible') === false){
+      $('.new-tweet').toggle('slow');
+    }
+      windows.scrollTop();
+    // }
   })
 
   loadTweets();
