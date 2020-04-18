@@ -3,6 +3,7 @@
   bottom: 1em;
   right: 1em;
   vertical-align: middle;
+  opacity: 0;
 }
 
 .action-scroll{
